@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="page-index">
+<body class="page-index dark">
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
@@ -40,10 +40,10 @@
                 </ul>
 
 
-                <button class="btn btn-outline-warning ms-3 theme-toggle" type="button" onclick="toggleTheme()"
+                <!-- <button class="btn btn-outline-warning ms-3 theme-toggle" type="button" onclick="toggleTheme()"
                     aria-label="Toggle theme">
                     <i id="themeToggleIcon" class="fas fa-moon"></i>
-                </button>
+                </button> -->
             </div>
 
         </div>
@@ -551,28 +551,28 @@ FOOTER
             themeToggleIcon.classList.toggle('fa-sun', isDark);
         }
 
-        function setTheme(isDark) {
-            document.body.classList.toggle('dark', isDark);
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            updateThemeIcon();
-        }
+        // function setTheme(isDark) {
+        //     document.body.classList.toggle('dark', isDark);
+        //     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        //     updateThemeIcon();
+        // }
 
-        (function initTheme() {
-            const saved = localStorage.getItem('theme');
-            if (saved === 'dark') {
-                setTheme(true);
-                return;
-            }
-            if (saved === 'light') {
-                setTheme(false);
-                return;
-            }
-            setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
-        })();
+        // (function initTheme() {
+        //     const saved = localStorage.getItem('theme');
+        //     if (saved === 'dark') {
+        //         setTheme(true);
+        //         return;
+        //     }
+        //     if (saved === 'light') {
+        //         setTheme(false);
+        //         return;
+        //     }
+        //     setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+        // })();
 
-        function toggleTheme() {
-            setTheme(!document.body.classList.contains('dark'));
-        }
+        // function toggleTheme() {
+        //     setTheme(!document.body.classList.contains('dark'));
+        // }
 
         (function initTyping() {
             const el = document.getElementById('roleTyping');

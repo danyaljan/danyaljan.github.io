@@ -12,7 +12,9 @@ body.page-index {
     color: var(--text);
     transition: 0.3s;
 }
-
+a{
+    color: inherit;
+}
 body.page-index.dark {
     --bg: #0b0f17;
     --text: #ffffff;
